@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="Main Theme.css">
+    <link rel="shortcut icon" href="Images/moon-cake.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /*Split Screen Landing Page Presets*/
+
+        /*Section settings for split screen landing page*/
+        .split_screen_section{
+            position: relative;
+            height: 100vh;
+            display: flex;
+        }
+        
+        .screen{
+            position: relative;
+            transition: 3s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* maybe some modificcations here later*/
+        }
+
+        .split_content h1{
+            font-size: 55px;
+            padding-right: 8px;
+            text-align: center;
+        }
+        
+        .split_content p{
+            display: none;
+        }
+
+        .screen:hover .split_content p{
+            display: contents;
+        }
+
+        .screen:nth-child(1){
+            background-image: linear-gradient(rgba(4, 9, 30, 0.4), rgba(4, 9, 30, 0.4)), url(images/Home_1.jpg);
+            background-size: cover;
+            position: relative;
+            display: flex;
+            flex: content;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px #000000;
+        }
+
+        .screen:nth-child(2){
+            background-image: linear-gradient(rgba(4, 9, 30, 0.4), rgba(4, 9, 30, 0.4)), url(images/Home_2.jpg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            display: flex;
+            flex: content;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px #000000;
+        }
+
+        .split_card{
+            max-width:300px;
+            transition: 1s;
+            align-content: center;
+        }
+
+        .screen:hover {
+            flex-grow: 10;
+        }
+
+        /*Card title text*/
+        .card h3 {
+            color: #ffce10;
+            font-family: "Garamond";
+            letter-spacing: 2px;
+            text-align: center;
+            padding: 30px 0 20px;
+            background: #3c2132;
+            height: 60px;
+            border-radius: 15px 15px 0 0;
+        }
+
+        /* Card paragraph text*/
+        .card p {
+            color: #fffDD0;
+            font-family: 'Lucida Sans';
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            line-height: 28px;
+            text-align: center;
+        }
+
+        .card p em {
+            color: #fffDD0;
+            font-family: 'Garamond';
+            font-size: 20px;
+            font-weight: bolder;
+            letter-spacing: 1px;
+            line-height: 28px;
+            text-align: center;
+            font-style: normal;
+        }
+
+        /* The foundation framework of the card*/
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 1cm 0 2cm;
+        }
+
+        /* overall card setting*/
+        .card {
+            background: #3c2132;
+            width: 355px;
+            height: auto;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, .3);
+        }
+
+        /*Card animations when you hover on it*/
+        .card:hover {
+            cursor: pointer;
+            transform: scale(1.06);
+            transition: 0.5s;
+        }
+
+        /*Card image size settings*/
+        .card img {
+            width: 100%;
+            height: 550px;
+            object-fit: auto;
+            object-position: center;
+        }
+
+        /*Read More button*/
+        .card a {
+            background-color: #fffDD0;
+            color: #3c2132;
+            font-family: "Garamond";
+            letter-spacing: 2px;
+            text-align: center;
+            font-size: 20px;
+            padding: 8px;
+            margin: 40px 75px;
+            text-decoration: none;
+            display: block;
+            box-shadow: 5px 5px 6px 3px rgba(0, 0, 0, .3);
+        }
+
+        /*animation when you hover the READ MORE button*/
+        .card a:hover {
+            background-color: #ffce10;
+            color: #000000;
+            transition: 0.2s;
+        }
+
+        /*Img for Backstory card*/
+        .backstory_img {
+            background-image: url(Images/ChangE.png);
+        }
+
+        /*Img for Customs card*/
+        .customs_img {
+            background-image: url(Images/Festival.png)
+        }
+
+        /*Img for Type of Mooncake card*/
+        .types_img {
+            background-image: url(Images/Mooncake.png);
+        }
+    </style>
+
+    <title>Mid-Autumn Festival - Home</title>
+    <meta name="viewport" content="with = device-width, initial-scale = 1.0">
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+
+        <section>
+            <div class="nav_bar dropdown">
+                <ul>
+                    <a title="Click to See: Mid-Autumn Festival Events Happening in KL This Year!" class="nav_title" href="https://www.littlestepsasia.com/kuala-lumpur/events/seasonal-events-guides/mid-autumn-festival-malaysia/" target="_blank"><h3>🥮MID-AUTUMN CELEBRATION </h3></a>
+                    <button class="dropbtn">MAIN MENU</button>
+                    <div class="dropdown-content">
+                        <li><a title="Click to See: The Different Types of Mooncakes!" href="Types of Mooncakes.html">Types of Mooncakes</a></li>
+                        <li><a title="Click to See: The Common Practices During This Celebration!" href="Customs.html">Customs</a></li>
+                        <li><a title="Click to See: The Origins of This Celebration!" href="Backstory.html">Backstory</a></li>
+                        <li><a title="Click to See: Our Home Page!" href="Index.html" class="active">Home</a></li>
+                    </div>
+                </ul> 
+            </div>
+        </section>
+    
+        <section class="split_screen_section">
+            <div class="screen">
+                <div class="split_card split_content">
+                        <h1 class="header_title" style="text-align: center; white-space:pre;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HAPPY<br>MID-AUTUMN<br>&nbsp;&nbsp;&nbsp;&nbsp;FESTIVAL<br></h1>
+                        <p class="comments" style="white-space:pre;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;May the Round Moon Bring you <br>a Happy Family and a Successful Future</p>
+                </div>
+            </div>
+
+            <div class="screen">
+                <div class="split_card">
+                    <div class="split_content">
+                        <h1 class="header_title" style="font-family: 'Noto Serif SC', serif; font-size: 65px;">中 秋 <br>快 乐<br></h1>
+                        <p class="comments" style="font-family: 'Noto Serif SC', serif; font-size: 22px; line-height: 33px;">祝福中秋佳节快乐<br>月圆人圆事事圆满</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </header>
+
+    <main class="main_background_Home sub_header">
+        <section style="position: relative;">
+            <br>
+            <h1 class="center">&mdash; WELCOME &mdash;</h1>
+
+            <div class="center content horizontal_line">
+                <h3><br>We have gathered some information about Mid-Autumn Festival</h3>
+                <h3>Do explore our page to learn more about this auspicious celebration!</h3>
+            </div>
+        </section>
+
+        <section class="container">
+
+            <div class="card">
+                <h3>BACKSTORY</h3>
+                <img src="Images/ChangE.png">
+                <div>
+                    <p><em>THE STORY OF CHANG'E<br>AND HOU YI<br><br></em>
+                        The legend of the Mid-Autumn <br>Festival regarding Chang'e, the <br>Chinese Moon Goddess,
+                        <br>and Hou Yi, an archer</p>
+                    <a href="Backstory.html">READ MORE</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>CUSTOMS</h3>
+                <img src="Images/Festival.png">
+                <div>
+                    <p><em>COMMON PRACTICES DURING THE FESTIVAL<br><br></em>
+                        The common, yet meaningful, <br>traditions that are carried out by <br>those celebrating <br>the
+                        Mid-Autumn Festival</p>
+                    <a href="Customs.html">READ MORE</a>
+                </div>
+            </div>
+            </div>
+
+            <div class="card">
+                <h3 style="line-height: 30px;">TYPES OF<br>MOONCAKES</h3>
+                <img src="Images/Mooncake.png">
+                <div>
+                    <p><em>A COLLECTION OF POPULAR <br>MOONCAKE VARIATIONS<br><br></em>
+                        From Snow Skin to Baked mooncakes, <br>mooncakes vary according to <br>different regional preferences, 
+                        traditions and flavors<br>
+                    </p>
+                    <a href="Types of Mooncakes.html">READ MORE</a>
+                </div>
+            </div>
+            </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+
+        <div class="foot">
+            <div class="for">For More Enquiries:</div>
+            <div class="contacts">
+                <div class="toh">
+                    <p>Toh Kar Ming</p>
+                    <p>✉: 21091137@imail.sunway.edu.my</p>
+                </div>
+
+                <div class="sugu">
+                    <p>Sugumaran A/L Thiagarajan</p>
+                    <p>✉: 18117069@imail.sunway.edu.my</p>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
